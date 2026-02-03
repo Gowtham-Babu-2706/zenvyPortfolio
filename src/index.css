@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@theme {
+  --color-primary: #ffffff;          /*white color*/
+  --color-secondary: #d1bcbc;        /*ashy color*/
+  --color-textPrimary: #000000;      /*black color*/
+  --color-textSecondary: #acaba9;    /*cream color*/
+  --color-borderPrimary:#000000;     /*black color*/
+}
+
+.dark {
+  --color-primary: #000000;        /*black Color*/
+  --color-secondary: #282A3A;      /*light Grey color */
+  --color-textPrimary: #fff;       /*white Color*/
+  --color-textSecondary: #7c706f;  /*beige Color*/
+  --color-borderPrimary:#ffffff;   /*white color*/
+
+}
+
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
