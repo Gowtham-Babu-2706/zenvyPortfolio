@@ -7,20 +7,22 @@ html {
 }
 
 @theme {
+  --color-primary: #000;        /*black Color*/
+  --color-secondary: #393E46;      /*light Grey color */
+  --color-textPrimary: #fff;       /*white Color*/
+  --color-textSecondary: #99a1af;  /*beige Color*/
+  --color-borderPrimary:#ffffff;   /*white color*/
+}
+
+.dark {
+
+
+
   --color-primary: #ffffff;          /*white color*/
   --color-secondary: #d1bcbc;        /*ashy color*/
   --color-textPrimary: #000000;      /*black color*/
   --color-textSecondary: #acaba9;    /*cream color*/
   --color-borderPrimary:#000000;     /*black color*/
-}
-
-.dark {
-  --color-primary: #000000;        /*black Color*/
-  --color-secondary: #282A3A;      /*light Grey color */
-  --color-textPrimary: #fff;       /*white Color*/
-  --color-textSecondary: #7c706f;  /*beige Color*/
-  --color-borderPrimary:#ffffff;   /*white color*/
-
 }
 
 

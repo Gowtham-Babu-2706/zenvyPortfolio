@@ -103,7 +103,7 @@ export function ServicesSection() {
               <div
                 key={index}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className=" bg-Secondary p-10  rounded-3xl border border-textPrimary hover:bg-secondary hover:dark:bg-gray-950"
+                className=" bg-Secondary p-10  rounded-3xl border border-textPrimary hover:bg-secondary "
               >
                 <div
                   className={`w-14 h-14 ${service.color} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}

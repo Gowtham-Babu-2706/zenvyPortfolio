@@ -54,7 +54,7 @@ export const HeroSection = () => {
                   px-8 py-4 rounded-full font-bold group
                   bg-black
                   text-white
-                  border border-black
+                  border border-borderPrimary
                 "
                 href="#work"
               >
@@ -66,7 +66,7 @@ export const HeroSection = () => {
                 className="
                   inline-flex items-center justify-center
                   px-8 py-4 rounded-full font-bold
-                  border border-black
+                  border border-borderPrimary
                   text-textPrimary
                   hover:bg-secondary
                   transition-colors

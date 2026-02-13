@@ -1,33 +1,40 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+
 const projects = [
   {
-    title: "Nova Platform",
-    category: "Product Design",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    gridClass: "col-span-1 md:col-span-2",
-  },
-  {
-    title: "Ethereal App",
-    category: "Mobile UI",
-    video: "https://www.youtube.com/embed/wiSCV_ZAbJ8?autoplay=1&mute=1&loop=1&playlist=wiSCV_ZAbJ8&controls=0&modestbranding=1",
+    title: "Short Video 1",
+    category: "Shorts",
+    type: "mp4",
+    video:
+      "",
     gridClass: "col-span-1",
   },
   {
-    title: "Prism Branding",
-    category: "Identity",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    gridClass: "col-span-1",
+    title: "Video Promotion",
+    category: "Promotion",
+    type: "mp4",
+    video:
+      "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/artiverse%20final.mp4",
+    gridClass: "col-span-2 md:col-span-2",
   },
   {
-    title: "Zenith Dashboard",
-    category: "UX Research",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    gridClass: "col-span-1 md:col-span-2",
+    title: "Logo Animation",
+    category: "Logo Designing",
+    type: "mp4",
+    video:
+      "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/project1.mp4",
+    gridClass: "col-span-2 md:col-span-2",
+  },
+  {
+    title: "Thinkfinite Promo",
+    category: "Promo",
+    type: "mp4",
+    video:
+      "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/THINKFINITE%20PROMO.mp4",
+    gridClass: "col-span-1",
   },
 ];
-
-
 
 export const Work = () => {
   const titleRef = useRef(null);
@@ -37,7 +44,7 @@ export const Work = () => {
     gsap.fromTo(
       titleRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }
     );
 
     gsap.fromTo(
@@ -50,7 +57,7 @@ export const Work = () => {
         stagger: 0.15,
         ease: "power3.out",
         delay: 0.2,
-      },
+      }
     );
   }, []);
 
@@ -62,18 +69,18 @@ export const Work = () => {
           <div className="max-w-xl">
             <h2
               ref={titleRef}
-              className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+              className="text-4xl md:text-5xl font-bold text-textPrimary "
             >
-              Selected Work
+              Work
             </h2>
 
-            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mt-6 text-lg text-textSecondary">
               A collection of our most impactful projects where we've helped
               brands redefine their digital presence.
             </p>
           </div>
 
-          <button className="text-lg font-bold border-b-2 border-black dark:border-white pb-1">
+          <button className="text-lg font-bold border-b-2 border-borderPrimary text-textPrimary pb-1">
             View all projects
           </button>
         </div>
@@ -87,30 +94,35 @@ export const Work = () => {
               className={`${project.gridClass} group cursor-pointer`}
             >
               {/* VIDEO */}
-              <div className="relative aspect-[16/10] rounded-3xl overflow-hidden mb-6">
-                <video
-                  src={project.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              <div className=" border-2 border-borderPrimary relative aspect-16/10 rounded-3xl overflow-hidden mb-6">
+                {project.type === "mp4" ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full border-borderPrimary  object-cover transition-transform duration-700 "
+                  />
+                ) : (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&loop=1&playlist=${project.videoId}&controls=0&modestbranding=1`}
+                    title={project.title}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full object-cover  border-borderPrimary "
+                  />
+                )}
 
-                {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="bg-white text-black px-8 py-3 rounded-full font-bold">
-                    View Project
-                  </span>
-                </div>
               </div>
 
               {/* TEXT */}
-              <p className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">
+              <p className="text-sm font-medium text-textSecondary uppercase tracking-widest mb-2">
                 {project.category}
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-2xl font-bold text-textSecondary dark:text-white">
                 {project.title}
               </h3>
             </div>
