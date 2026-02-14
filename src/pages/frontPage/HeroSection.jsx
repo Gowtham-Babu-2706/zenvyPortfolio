@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import FrontPoster from "../../assets/FrontPagePoster.jpg"
+import { Link } from "react-router";
 
 export const HeroSection = () => {
   const textRef = useRef(null);
@@ -48,7 +49,7 @@ export const HeroSection = () => {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
+              <Link
                 className="
                   inline-flex items-center justify-center
                   px-8 py-4 rounded-full font-bold group
@@ -56,11 +57,11 @@ export const HeroSection = () => {
                   text-white
                   border border-borderPrimary
                 "
-                href="#work"
+                to='/contact'
               >
-                View Our Work
+                Join with US 
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
 
               <a
                 className="

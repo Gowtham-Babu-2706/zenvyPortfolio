@@ -9,6 +9,7 @@ const projects = [
     video:
       "",
     gridClass: "col-span-1",
+    addClass:"object-contain",
   },
   {
     title: "Video Promotion",
@@ -16,7 +17,8 @@ const projects = [
     type: "mp4",
     video:
       "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/artiverse%20final.mp4",
-    gridClass: "col-span-2 md:col-span-2",
+    gridClass: " col-span-2 md:col-span-2",
+    addClass:"rotate-270 object-cover",
   },
   {
     title: "Logo Animation",
@@ -25,6 +27,7 @@ const projects = [
     video:
       "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/project1.mp4",
     gridClass: "col-span-2 md:col-span-2",
+    addClass:"object-contain",
   },
   {
     title: "Thinkfinite Promo",
@@ -33,6 +36,7 @@ const projects = [
     video:
       "https://zenvymediabucket.s3.ap-south-1.amazonaws.com/THINKFINITE%20PROMO.mp4",
     gridClass: "col-span-1",
+    addClass:"object-contain",
   },
 ];
 
@@ -102,7 +106,7 @@ export const Work = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full border-borderPrimary  object-cover transition-transform duration-700 "
+                    className={`w-full h-full  ${project.addClass} border-borderPrimary   transition-transform duration-700 `}
                   />
                 ) : (
                   <iframe
