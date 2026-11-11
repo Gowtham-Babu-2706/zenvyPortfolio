@@ -34,7 +34,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="bg-[#F9B2D7] py-16 sm:py-28">
+    <section className="bg-[#F9FFA4] py-16 sm:py-28">
       <div className="mx-auto w-full max-w-[1512px] px-5 sm:px-10 lg:px-14">
         <div className="grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
           {/* Left Column */}
